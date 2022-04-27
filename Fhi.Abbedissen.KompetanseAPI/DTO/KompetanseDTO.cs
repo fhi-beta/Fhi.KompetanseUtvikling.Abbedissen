@@ -15,6 +15,11 @@ namespace Fhi.Abbedissen.KompetanseAPI.DTO
             Beskrivelse = k.Beskrivelse;
             Id = k.Id;
         }
+
+        public KompetanseDTO()
+        {
+
+        }
     }
 
 

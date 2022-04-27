@@ -8,10 +8,7 @@ namespace Fhi.Abbedissen.KompetanseAPI.Controllers
     [Route("[controller]")]
     public class KompetanseController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
-        {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    };
+        public List<Kompetanse> KompetanseDB { get; set; }
 
         private readonly ILogger<KompetanseController> _logger;
         Kompetanse kompetanse;
@@ -23,12 +20,35 @@ namespace Fhi.Abbedissen.KompetanseAPI.Controllers
             kompetanse.Id = 1;
             kompetanse.Navn = "React";
             kompetanse.Beskrivelse = "Klient tekn.";
+
+            KompetanseDB = new List<Kompetanse>();
         }
 
-        [HttpGet(Name = "GetWeatherForecast")]
+        [HttpGet(Name = "GetKompetanse")]
         public KompetanseDTO GetKompetanse()
         {
             return new KompetanseDTO(kompetanse);
         }
+
+        [HttpPost(Name = "PostKompetanse")]
+        public dynamic PostKompetanse([FromBody] KompetanseDTO kompetanseDTO )
+        {
+            int index = KompetanseDB.Count + 1;
+
+            var nyttElement = new Kompetanse()
+            {
+                Navn = kompetanseDTO.Navn,
+                Beskrivelse = kompetanseDTO.Beskrivelse,
+                Id = index,
+
+            };
+
+            KompetanseDB.Add(nyttElement);
+
+            return Ok();
+        }
+
+
+
     }
 }
