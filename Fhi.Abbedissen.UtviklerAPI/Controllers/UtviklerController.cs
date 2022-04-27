@@ -57,6 +57,7 @@ public class UtviklerController : ControllerBase
 
         var utvikler = new Utvikler()
         {
+            Id=utviklerDTO.Id,
             Etternavn = utviklerDTO.Etternavn,
             Fornavn = utviklerDTO.Fornavn,
             Opprettet = DateTime.Now
