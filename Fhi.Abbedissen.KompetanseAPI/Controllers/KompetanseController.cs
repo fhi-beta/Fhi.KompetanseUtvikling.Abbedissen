@@ -1,5 +1,5 @@
 using Fhi.Abbedissen.KompetanseAPI.Model;
-using Fhi.Abbedissen.KompetanseAPI.DTO;
+using Fhi.Abbedissen.Felles;
 using Fhi.Abbedissen.KompetanseAPI.Services;
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
