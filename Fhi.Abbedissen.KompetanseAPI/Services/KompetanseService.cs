@@ -9,6 +9,11 @@ namespace Fhi.Abbedissen.KompetanseAPI.Services
                 Id = 1,
                 Navn = "React",
                 Beskrivelse = "Klient tekn."
+            },
+             new Kompetanse {
+                Id = 2,
+                Navn = "Automapper",
+                Beskrivelse = "Automapper profile.."
             }
         };  
 

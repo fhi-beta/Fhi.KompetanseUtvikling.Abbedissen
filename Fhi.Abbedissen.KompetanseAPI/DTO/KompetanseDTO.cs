@@ -1,4 +1,4 @@
-﻿using Fhi.Abbedissen.KompetanseAPI.Model;
+﻿
 
 namespace Fhi.Abbedissen.KompetanseAPI.DTO
 {
@@ -9,12 +9,7 @@ namespace Fhi.Abbedissen.KompetanseAPI.DTO
 
         public string Beskrivelse { get; set; }
 
-        public KompetanseDTO(Kompetanse k)
-        {
-            Navn = k.Navn;
-            Beskrivelse = k.Beskrivelse;
-            Id = k.Id;
-        }
+      
 
         public KompetanseDTO()
         {

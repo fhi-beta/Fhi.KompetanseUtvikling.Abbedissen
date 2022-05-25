@@ -2,6 +2,7 @@ using Fhi.Abbedissen.KompetanseAPI.Model;
 using Fhi.Abbedissen.KompetanseAPI.DTO;
 using Fhi.Abbedissen.KompetanseAPI.Services;
 using Microsoft.AspNetCore.Mvc;
+using AutoMapper;
 
 namespace Fhi.Abbedissen.KompetanseAPI.Controllers
 {
@@ -10,25 +11,25 @@ namespace Fhi.Abbedissen.KompetanseAPI.Controllers
     public class KompetanseController : ControllerBase
     {
         private readonly IKompetanseService kompetanseService;
+        private readonly IMapper mapper;
 
-        public KompetanseController(IKompetanseService service)
+        public KompetanseController(IKompetanseService service, IMapper mapper)
         {
-            this.kompetanseService = service;   
+            this.kompetanseService = service;
+            this.mapper = mapper;
         }
 
         // GET: api/<KompetanseController>
         [HttpGet]
         public ActionResult<IEnumerable<KompetanseDTO>> GetKompetanse()
         {
+
+
+
             var kompetanseListe = kompetanseService.HentKompetanse();
 
-            var kompetanseDTOer = kompetanseListe.Select(k => new KompetanseDTO()
-            {
-                Id = k.Id,
-                Navn = k.Navn,
-                Beskrivelse = k.Beskrivelse
-            });
-
+            var kompetanseDTOer = mapper.Map<IEnumerable<KompetanseDTO>>(kompetanseListe);
+            
             return Ok(kompetanseDTOer);
         }
 

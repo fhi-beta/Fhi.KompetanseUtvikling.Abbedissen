@@ -1,3 +1,5 @@
+using AutoMapper;
+using Fhi.Abbedissen.KompetanseAPI.Profile;
 using Fhi.Abbedissen.KompetanseAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +11,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddTransient<IKompetanseService, KompetanseService>();
+
+
+KonfigurerAutomapper(builder.Services);
 
 var app = builder.Build();
 
@@ -26,3 +31,16 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+
+ void KonfigurerAutomapper(IServiceCollection services)
+{
+    var mapperConfig = new MapperConfiguration(cfg =>
+    {
+        cfg.AddProfile<KompetanseProfile>();
+        
+
+    });
+    var mapper = new Mapper(mapperConfig);
+    services.AddSingleton<IMapper>(mapper);
+}
