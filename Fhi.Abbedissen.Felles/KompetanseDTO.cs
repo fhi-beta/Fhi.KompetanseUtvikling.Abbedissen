@@ -1,6 +1,6 @@
 ﻿
 
-namespace Fhi.Abbedissen.KompetanseAPI.DTO
+namespace Fhi.Abbedissen.Felles
 {
     public class KompetanseDTO
     {

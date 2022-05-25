@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Fhi.Abbedissen.KompetanseAPI.DTO;
+using Fhi.Abbedissen.Felles;
 using Fhi.Abbedissen.KompetanseAPI.Model;
 
 namespace Fhi.Abbedissen.KompetanseAPI.Profile;
