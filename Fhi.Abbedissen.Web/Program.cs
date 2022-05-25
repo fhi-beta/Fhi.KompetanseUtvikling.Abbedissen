@@ -1,3 +1,6 @@
+using Fhi.Abbedissen.Web.Controllers;
+using Refit;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +9,11 @@ builder.Services.AddSwaggerGen();
 
 
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddRefitClient<IUtviklerController>()
+        .ConfigureHttpClient(c => c.BaseAddress = new Uri("https://localhost:7229/"));
+
+
 
 var app = builder.Build();
 
