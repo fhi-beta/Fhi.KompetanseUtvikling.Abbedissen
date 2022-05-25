@@ -22,9 +22,9 @@ namespace Fhi.Abbedissen.KompetanseAPI.Services
             return _kompetanse; 
         }
 
-        public Kompetanse HentKompetanse(int id)
+        public Kompetanse HentKompetanse(Guid guid)
         {
-            return _kompetanse.SingleOrDefault(k => k.Id == id);
+            return _kompetanse.SingleOrDefault(k => k.Guid == guid);
         }
 
         public void LeggTilKompetanse(Kompetanse kompetanse)
