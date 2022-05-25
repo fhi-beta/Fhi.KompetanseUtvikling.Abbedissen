@@ -11,6 +11,7 @@
     "Fhi.Abbedissen.Web": {
       "commandName": "Project",
       "launchBrowser": true,
+      "launchUrl": "swagger",
       "applicationUrl": "https://localhost:7168;http://localhost:5168",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
