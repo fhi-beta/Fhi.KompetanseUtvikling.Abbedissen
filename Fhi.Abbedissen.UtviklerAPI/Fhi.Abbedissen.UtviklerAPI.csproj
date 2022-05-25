@@ -11,4 +11,8 @@
     <Folder Include="DTO\" />
     <Folder Include="Model\" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Fhi.Abbedissen.Felles\Fhi.Abbedissen.Felles.csproj" />
+  </ItemGroup>
 </Project>
