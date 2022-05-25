@@ -1,4 +1,4 @@
-﻿using Fhi.Abbedissen.UtviklerAPI.DTO;
+﻿using Fhi.Abbedissen.Felles;
 using Fhi.Abbedissen.UtviklerAPI.Model;
 
 namespace Fhi.Abbedissen.UtviklerAPI.Services

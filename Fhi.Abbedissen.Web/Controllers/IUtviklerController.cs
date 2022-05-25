@@ -1,4 +1,4 @@
-﻿using Fhi.Abbedissen.UtviklerAPI.DTO;
+﻿using Fhi.Abbedissen.Felles;
 using Refit;
 
 namespace Fhi.Abbedissen.Web.Controllers

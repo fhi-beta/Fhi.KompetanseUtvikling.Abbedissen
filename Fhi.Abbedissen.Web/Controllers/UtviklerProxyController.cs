@@ -1,4 +1,4 @@
-﻿using Fhi.Abbedissen.UtviklerAPI.DTO;
+﻿using Fhi.Abbedissen.Felles;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Fhi.Abbedissen.Web.Controllers;

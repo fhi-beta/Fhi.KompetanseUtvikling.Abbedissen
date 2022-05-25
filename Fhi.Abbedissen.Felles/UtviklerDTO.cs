@@ -1,4 +1,4 @@
-﻿namespace Fhi.Abbedissen.UtviklerAPI.DTO
+﻿namespace Fhi.Abbedissen.Felles
 {
     public class UtviklerDTO
     {
