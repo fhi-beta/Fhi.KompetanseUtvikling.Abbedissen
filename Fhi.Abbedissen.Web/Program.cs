@@ -13,6 +13,9 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddRefitClient<IUtviklerController>()
         .ConfigureHttpClient(c => c.BaseAddress = new Uri("https://localhost:7229/"));
 
+builder.Services.AddRefitClient<IKompetanseController>()
+        .ConfigureHttpClient(c => c.BaseAddress = new Uri("https://localhost:7066/"));
+
 
 
 var app = builder.Build();
