@@ -23,9 +23,6 @@ namespace Fhi.Abbedissen.KompetanseAPI.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<KompetanseDTO>> GetKompetanse()
         {
-
-
-
             var kompetanseListe = kompetanseService.HentKompetanse();
 
             var kompetanseDTOer = mapper.Map<IEnumerable<KompetanseDTO>>(kompetanseListe);
@@ -42,12 +39,7 @@ namespace Fhi.Abbedissen.KompetanseAPI.Controllers
             if (kompetanse == null)
                 return NotFound();
 
-            var kompetanseDTO = new KompetanseDTO()
-            {
-                Id = kompetanse.Id,
-                Navn = kompetanse.Navn, 
-                Beskrivelse = kompetanse.Beskrivelse
-            };
+            var kompetanseDTO = mapper.Map<KompetanseDTO>(kompetanse);
 
             return Ok(kompetanseDTO);
         }
