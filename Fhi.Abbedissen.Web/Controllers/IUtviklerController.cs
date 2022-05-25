@@ -3,7 +3,7 @@ using Refit;
 
 namespace Fhi.Abbedissen.Web.Controllers
 {
-    public interface v
+    public interface IUtviklerController
     {
         [Get("/api/Utvikler")]
         Task<IEnumerable<UtviklerDTO>> GetUtviklerResponse();
