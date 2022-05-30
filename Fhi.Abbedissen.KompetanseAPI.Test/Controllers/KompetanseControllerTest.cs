@@ -7,6 +7,7 @@ using Fhi.Abbedissen.KompetanseAPI.Services;
 using Microsoft.AspNetCore.Mvc;
 using NSubstitute;
 using NUnit.Framework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -49,7 +50,7 @@ namespace Fhi.Abbedissen.KompetanseAPI.Test
 
             var listeAvKompetanseDto = (IEnumerable<KompetanseDTO>)((OkObjectResult)response.Result).Value;
             Assert.AreEqual(2, listeAvKompetanseDto.Count()); 
-        }
+        }        
 
         [Test]
         public void GetKompetanseByGuidTest()
@@ -71,6 +72,29 @@ namespace Fhi.Abbedissen.KompetanseAPI.Test
             Assert.AreEqual(kompetanse.Guid, kompetanseDto.Guid);
             Assert.AreEqual(kompetanse.Navn, kompetanseDto.Navn);
             Assert.AreEqual(kompetanse.Beskrivelse, kompetanseDto.Beskrivelse);
+        }
+
+        [Test]
+        public void PostKompetanseUtenDtoTest()
+        {
+            // act
+            var result = controller.Post(null);
+
+            // assert 
+            Assert.IsInstanceOf<BadRequestResult>(result);
+        }
+
+        [Test]
+        public void PostKompetanseTest()
+        {
+            // arrange
+            var kompetanseDto = new KompetanseDTO();
+
+            // act
+            controller.Post(kompetanseDto);
+
+            // assert
+            service.Received().LeggTilKompetanse(Arg.Any<Kompetanse>());
         }
     }
 }
