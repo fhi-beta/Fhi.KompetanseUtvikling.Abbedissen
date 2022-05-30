@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fhi.Abbedissen.KompetanseAP
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fhi.Abbedissen.Web", "Fhi.Abbedissen.Web\Fhi.Abbedissen.Web.csproj", "{07FF8654-6A7F-4A63-8E0E-F33772AFCBA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fhi.Abbedissen.Felles", "Fhi.Abbedissen.Felles\Fhi.Abbedissen.Felles.csproj", "{7761E59E-7CDF-439B-80AA-0E5AACC3E68D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fhi.Abbedissen.Felles", "Fhi.Abbedissen.Felles\Fhi.Abbedissen.Felles.csproj", "{7761E59E-7CDF-439B-80AA-0E5AACC3E68D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fhi.Abbedissen.KompetanseAPI.Test", "Fhi.Abbedissen.KompetanseAPI.Test\Fhi.Abbedissen.KompetanseAPI.Test.csproj", "{FF51BA39-397E-4C45-938F-EB0BA61ED852}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{7761E59E-7CDF-439B-80AA-0E5AACC3E68D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7761E59E-7CDF-439B-80AA-0E5AACC3E68D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7761E59E-7CDF-439B-80AA-0E5AACC3E68D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF51BA39-397E-4C45-938F-EB0BA61ED852}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF51BA39-397E-4C45-938F-EB0BA61ED852}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF51BA39-397E-4C45-938F-EB0BA61ED852}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF51BA39-397E-4C45-938F-EB0BA61ED852}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
